@@ -4,9 +4,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     createSessionButton.addEventListener("click", (event) => {
         window.alert('Button pressed');
+        fetch('http://localhost:8000/', {method: 'POST'})
     });
-});
-
-createSessionButton.addEventListener("click", (event) => {
-    window.alert('Button pressed');
 });
