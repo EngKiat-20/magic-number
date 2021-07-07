@@ -4,6 +4,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 var createSessionButton = document.getElementById('create-session-button')
 
-createSessionButton.addEventListener("click", (event) => {
+createSessionButton.addEventListener("click", function(){
     window.alert('Button Pressed');
 });
