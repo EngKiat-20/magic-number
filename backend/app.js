@@ -5,9 +5,8 @@ const {nanoid} = require("nanoid");
 var app = express()
 app.use(cors())
 
-app.post('/', function(req, res) {
-    console.log(sessions);
-    res.send(sessions)
+app.post('/', function(req, res ) {
+    console.log("Creating new session");
 })
 ;
 app.listen(8000, function () {
