@@ -5,8 +5,8 @@ const nanoId = require("nanoid");
 var app = express()
 app.use(cors())
 
-app.post('/', function() {
-    
+app.post('/', function(req, res) {
+    res.send("Creating new session")
 })
 
 app.listen(8000, function () {
