@@ -12,8 +12,8 @@ var sessions = {
 
 app.post('/', function(req, res) {
     res.send(sessions)
-})
-;
+});
+
 app.listen(8000, function () {
     console.log('CORS-enabled web server listening on port 8000');
 });
