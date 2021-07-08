@@ -5,13 +5,15 @@ const {nanoid} = require("nanoid");
 var app = express()
 app.use(cors())
 
-var sessionId = nanoid(10)
-var sessions = {
-    session_id: sessionId
-}
+const sessions = {}
 
 app.post('/', function(req, res) {
-    res.send(sessions)
+    const sessionId = nanoid(10)
+    sessions[sessionId] = 1
+
+    res.json({
+        session_id: sessionId
+    })
 });
 
 app.listen(8000, function () {
