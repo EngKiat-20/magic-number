@@ -5,8 +5,9 @@ const {nanoid} = require("nanoid");
 var app = express()
 app.use(cors())
 
+var sessionId = nanoid(10)
 var sessions = {
-    sessionId: sessionId = nanoid(10)
+    session_id: sessionId
 }
 
 app.post('/', function(req, res) {
