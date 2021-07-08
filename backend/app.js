@@ -7,7 +7,7 @@ app.use(cors())
 
 sessionId = nanoid(10);
 var sessions = {
-    sessionId: 1
+    sessionId: sessionId
 }
 
 app.post('/', function(req, res) {
