@@ -6,7 +6,7 @@ var app = express()
 app.use(cors())
 
 app.post('/', function(req, res) {
-    res.send('Session has been created')
+    res.send(sessions)
 })
 ;
 app.listen(8000, function () {
