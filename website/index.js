@@ -15,7 +15,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
     submitGuessButton.addEventListener("click", (event) => {
-        window.alert("Submit button clicked")
 
         const sessionIdInput = document.getElementById('session-id-input');
         const attemptInput = document.getElementById('attempt-input');
