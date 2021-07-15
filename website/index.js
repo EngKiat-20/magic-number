@@ -21,8 +21,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const attemptInput = document.getElementById('attempt-input');
 
         if (!attemptInput.reportValidity()) {
-            return;
-        }
+            if (!sessionIdInput.reportValidity() || !attemptInput.reportValidity()) {
+                return;
+            }
+        }    
 
         const sessionId = sessionIdInput.value;
         const attempt = attemptInput.value;
