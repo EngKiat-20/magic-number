@@ -8,12 +8,18 @@
 
         <p>New Session Id: <b id="session-id-field"></b></p>
 
-        
-        <label for="session-id-box">Session ID:</label>
-        <input type="text" id="session-id-box"><br><br>
-        <label for="attempt">Attempt:</label>
-        <input type="text" id="attempt"><br><br>
-        <button>Submit Guess</button>
+        <div>
+            <label for="session-id-input">Session Id:</label>
+            <input id="session-id-input" />
+        </div>
+        <div>
+            <label for="attempt-input">Attempt:</label>
+            <input id="attempt-input" />
+        </div>
+        <button id="submit-guess-button">Submit Guess</button>
+
+        <p>Lower Bound: <b id="lower-bound-label"></b></p>
+        <p>Upper Bound: <b id="upper-bound-label"></b></p>
         
     </body>
 </html>
