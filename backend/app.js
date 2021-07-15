@@ -23,3 +23,16 @@ app.post('/', function (req, res) {
 app.listen(8000, function () {
     console.log('Magic Number Game app listening on Port 8000');
 });
+
+app.put('/:sessionId', function (req, res) {
+
+    const sessionId = req.params.sessionId;
+
+    const attempt = req.query.attempt;
+
+    const magicNumberGame = sessions[sessionId];
+
+    const progress = magicNumberGame.guess(attempt);
+
+    return res.json(progress);
+});

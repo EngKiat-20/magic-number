@@ -20,6 +20,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const sessionIdInput = document.getElementById('session-id-input');
         const attemptInput = document.getElementById('attempt-input');
 
+        if (!attemptInput.reportValidity()) {
+            return;
+        }
+
         const sessionId = sessionIdInput.value;
         const attempt = attemptInput.value;
 
@@ -41,6 +45,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 
                 lowerBoundLabel.innerHTML = lowerBound;
                 upperBoundLabel.innerHTML = upperBound;
+
+                attemptInput.setAttribute('min', lowerBound + 1);
+                attemptInput.setAttribute('max', upperBound - 1);
             });
     })
 });
