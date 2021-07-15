@@ -5,5 +5,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     createSessionButton.addEventListener("click", (event) => {
         window.alert('Button pressed');
         fetch('http://localhost:8000/', {method: 'POST'})
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            const sessionId = json.session_id;
+            const sessionIdField = document.getElementById("session-id-field");
+            sessionIdField.innerHTML = sessionId;
+        })
     });
 });
