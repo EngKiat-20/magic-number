@@ -30,15 +30,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 return response.json();
             })
             .then(function (json) {
-                // Extract the lower and upper bound
+                
                 const lowerBound = json[0];
                 const upperBound = json[1];
 
-                // Get the reference to the label element
+                
                 const lowerBoundLabel = document.getElementById('lower-bound-label');
                 const upperBoundLabel = document.getElementById('upper-bound-label');
 
-                // Update the label
+                
                 lowerBoundLabel.innerHTML = lowerBound;
                 upperBoundLabel.innerHTML = upperBound;
             });
