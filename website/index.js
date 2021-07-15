@@ -37,6 +37,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             })
             .then(function (json) {
                 
+                if (json.error) throw json.error;
+
                 const lowerBound = json[0];
                 const upperBound = json[1];
 
@@ -50,6 +52,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                 attemptInput.setAttribute('min', lowerBound + 1);
                 attemptInput.setAttribute('max', upperBound - 1);
+            })
+            .catch(function (error) {
+                alert(error);
             });
     })
 });
